@@ -1,0 +1,17 @@
+{
+  "name": "@wjh666/ssh",
+  "version": "0.0.1",
+  "description": "",
+  "bin": {
+    "w-ssh": "index.js"
+  },
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.1.0",
+    "inquirer": "^8.0.0",
+    "node-ssh": "^13.0.0",
+    "ssh2": "^1.11.0"
+  }
+}
