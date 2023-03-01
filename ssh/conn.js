@@ -56,14 +56,14 @@ async function putFast (sftp) {
       const newData = path.join(serverDir, name)
       if (type === 'files') {
         // 创建文件夹
-        sftp.mkdir(newData)
+        sftp.mkdir(newData.split(path.sep).join('/'))
         if (index === data.length - 1) {
           resolve()
         }
       } else if (type === 'file') {
         // 上传文件
         sftp.fastPut(
-          path.join(process.cwd(), localDir, name), // 本地 assets.tar.gz 文件路径
+          path.join(process.cwd(), localDir, name).split(path.sep).join('/'), // 本地 assets.tar.gz 文件路径
           path.join(serverDir, name), // 服务器 assets.tar.gz 文件路径
           {},
           (err, result) => {

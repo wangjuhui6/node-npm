@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const inquirer = require('inquirer')
@@ -38,7 +39,7 @@ async function upFile () {
   connRun(text)
 }
 
-(function run () {
+function run () {
   const arguments = process.argv.slice(2);
   const name = arguments[0]
   const fun = {
@@ -49,4 +50,6 @@ async function upFile () {
     return
   }
   console.log('无此命令')
-})()
+}
+
+run()
