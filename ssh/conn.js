@@ -63,8 +63,8 @@ async function putFast (sftp) {
       } else if (type === 'file') {
         // 上传文件
         sftp.fastPut(
-          path.join(process.cwd(), localDir, name).split(path.sep).join('/'), // 本地 assets.tar.gz 文件路径
-          path.join(serverDir, name), // 服务器 assets.tar.gz 文件路径
+          path.join(process.cwd(), localDir, name),
+          path.join(serverDir, name).split(path.sep).join('/'),
           {},
           (err, result) => {
             if (err) throw err;

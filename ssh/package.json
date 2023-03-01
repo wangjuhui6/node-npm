@@ -1,6 +1,6 @@
 {
   "name": "@wjh666/ssh",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "",
   "bin": {
     "w-ssh": "index.js"
